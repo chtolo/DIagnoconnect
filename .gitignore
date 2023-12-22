@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE files
+.idea/
+.vscode/
+
+# Compiled Python files
+*.pyc
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
