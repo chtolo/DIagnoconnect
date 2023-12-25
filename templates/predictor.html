@@ -144,6 +144,21 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="prédicteur-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
+                        <h1 class="text-white mb-4">Mesurer votre temperature</h1>
+                        <form oninput="result.value=temperature.value">
+                            <!-- Temperature Input -->
+                            <div class="row g-3">
+                                <input type="number" class="form-control border-white p-3" id="temperature" name="temperature" placeholder="Measure your temperature" required>
+                                <br>
+                                <!-- Output to Display Temperature Result -->
+                                <output name="result" id="result" class="form-control border-white p-3" for="temperature">0</output>
+                                <br>
+                                <div class="col-12">
+                                    <button class="btn btn-dark w-100 py-3"  type="button" onclick="window.location.href='diabet.html';">Predicteur</button>
+                                </div>
+                            </div>
+                        </form>
+                       <!-- 
                         <h1 class="text-white mb-4">Choisir la maladie à prédicter</h1>
                         <form>
                             <div class="row g-3">
@@ -162,6 +177,7 @@
                                 </div>
                             </div>
                         </form>
+                        -->
                     </div>
                 </div>
             </div>
