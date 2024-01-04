@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, flash, redirect
+from flask import Flask, render_template, jsonify, request, flash, redirect
 import pickle
 import numpy as np
 from PIL import Image
 import pandas as pd
 from tensorflow.keras.models import load_model
 import cv2
-
+current_temperature = 21
 app = Flask(__name__)
 
 def predict(values, dic):
@@ -25,8 +25,14 @@ def predict(values, dic):
 
 @app.route("/")
 def home():
-    return render_template('index.html')
-
+    return render_template('index.html', current_temperature = current_temperature)
+@app.route('/update_dht', methods=['POST'])
+def update_dht():
+    if request.method == 'POST':
+        temperature = request.form.get('temperature')
+        global current_temperature
+        current_temperature = temperature
+        return jsonify({'message': 'Température mise à jour avec succès'})
 @app.route("/about",methods=['GET', 'POST'])
 def about():
     return render_template('about.html')
@@ -66,6 +72,7 @@ def pneumoniaPage():
 @app.route("/predictor", methods=['GET', 'POST'])
 def predictor():
     return render_template('predictor.html')
+        
 
 @app.route("/pneumoniapredict", methods = ['POST', 'GET'])
 def pneumonia():
