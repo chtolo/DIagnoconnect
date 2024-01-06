@@ -4,4 +4,4 @@ Pillow
 pandas
 tensorflow
 opencv-python
-pickle5
+pickle4
