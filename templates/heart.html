@@ -95,7 +95,14 @@
                 <a href="{{ url_for('contact') }}" class="nav-item nav-link">Contact</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 ms-3">prédicteur</a>
+            <div id="chatbotButton" class="chatbot-button">
+                <div class="chatbot-icon">
+                    <i class="bi bi-chat-dots"></i>
+                </div>
+                <div class="chatbot-text">
+                    <a href="{{ url_for('predictor') }}">Our Assistant</a>
+                </div>
+            </div>
         </div>
     </nav>
     <!-- Navbar End -->

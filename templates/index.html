@@ -93,7 +93,14 @@
                 <a href="{{ url_for('contact') }}" class="nav-item nav-link">Contact</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 ms-3">Prédicteur</a>
+            <div id="chatbotButton" class="chatbot-button">
+                <div class="chatbot-icon">
+                    <i class="bi bi-chat-dots"></i>
+                </div>
+                <div class="chatbot-text">
+                    <a href="{{ url_for('predictor') }}">Our Assistant</a>
+                </div>
+            </div>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -128,18 +135,28 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Bienvenue sur notre plateforme dédiée à la santé et au bien-être, où la technologie rencontre la médecine .</h5>
                             <h4 class="display-4 text-white mb-md-4 animated zoomIn">Téléchargez vos données médicales et laissez notre modèle vous fournir des diagnostics précis et fiables.</h4>
-                            <a href="{{ url_for('predictor') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">prédicteur</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact Us</a>
-                        </div>
+                    <div>
+                        <a href="{{ url_for('predictor') }}" class="btn btn-primary py-md-3 px-md-5 animated slideInRight">Our Assistant</a>
                     </div>
                 </div>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInLeft">Contact Us</a>
+            </div>
+        </div>
+    </div>
                 <div class="carousel-item">
                     <img class="w-100" src="/static/img/carousel-2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Bienvenue sur notre plateforme dédiée à la santé et au bien-être, où la technologie rencontre la médecine .</h5>
                             <h4 class="display-4 text-white mb-md-4 animated zoomIn">Téléchargez vos données médicales et laissez notre modèle vous fournir des diagnostics précis et fiables.</h4>
-                            <a href="{{ url_for('predictor') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">prédicteur</a>
+                            <div id="chatbotButton" class="chatbot-button">
+                <div class="chatbot-icon">
+                    <i class="bi bi-chat-dots"></i>
+                </div>
+                <div class="chatbot-text">
+                    <a href="{{ url_for('predictor') }}">Our Assistant</a>
+                </div>
+            </div>
                             <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact Us</a>
                         </div>
                     </div>
@@ -177,7 +194,6 @@
                             Comment utilisons-nous la puissance des algorithmes ? Notre approche repose sur l'apprentissage automatique, une discipline qui permet à nos systèmes de s'adapter et d'apprendre à partir des données médicales que vous nous fournissez. Chaque interaction avec notre application web alimente notre modèle, le rendant plus intelligent et plus précis au fil du temps. C'est cette capacité d'adaptation constante qui nous permet de rester à la pointe des avancées médicales et de vous offrir des diagnostics toujours plus fiables.
                             
                         </p>
-                        <a href="{{ url_for('predictor') }}" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Prédicteur</a>
 
                 </div>
                     
@@ -202,24 +218,11 @@
                         <p class="text-white mb-0">Téléchargez vos données médicales et laissez notre modèle vous fournir des diagnostics précis et fiables. Recevez des diagnostics rapides et interactifs tout en bénéficiant de la possibilité de consulter directement des professionnels de la santé.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="prédicteur-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
-                        <h1 class="text-white mb-4">Mesurer votre temperature</h1>
-                            <!-- Temperature Input -->
-                            <div class="row g-3">
-                                <br>
-                                <output name="result" id="result" class="form-control border-white p-3" for="temperature">{{ current_temperature }}</output>
-                                <br>
-                                <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3"  type="button" onclick="window.location.href='diabet.html';">Predicteur</button>
-                                </div>
-                            </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     <!-- prédicteur End -->
+
 
 
     <!-- Service Start -->
@@ -303,7 +306,7 @@
                                 
                             </div>
                             <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                                <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">prédicteur</a>
+                                <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Our Assistant</a>
                             </div>
                         </div>
                         <div class="price-item pb-4">
@@ -312,7 +315,7 @@
                                 
                             </div>
                             <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                                <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">prédicteur</a>
+                                <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Our Assistant</a>
                             </div>
                         </div>
                         <div class="price-item pb-4">
@@ -321,7 +324,7 @@
                                 
                             </div>
                             <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                                <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">prédicteur</a>
+                                <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Our Assistant</a>
                             </div>
                         
                         </div>
@@ -331,7 +334,7 @@
                                 
                             </div>
                             <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                                <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">prédicteur</a>
+                                <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Our Assistant</a>
                             </div>
                         </div>
                         </div>

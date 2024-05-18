@@ -1,7 +1,7 @@
-Flask
-numpy
-Pillow
-pandas
-tensorflow
-opencv-python
-pickle
+Flask==3.0.0
+numpy==1.24.2
+Pillow==9.4.0
+pandas==1.5.3
+tensorflow==2.15.0
+opencv-python==4.8.1.78
+pickleshare==0.7.5

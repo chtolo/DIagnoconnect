@@ -25,14 +25,7 @@ def predict(values, dic):
 
 @app.route("/")
 def home():
-    return render_template('index.html', current_temperature = current_temperature)
-@app.route('/update_dht', methods=['POST'])
-def update_dht():
-    if request.method == 'POST':
-        temperature = request.form.get('temperature')
-        global current_temperature
-        current_temperature = temperature
-        return jsonify({'message': 'Température mise à jour avec succès'})
+    return render_template('index.html')
 @app.route("/about",methods=['GET', 'POST'])
 def about():
     return render_template('about.html')

@@ -323,3 +323,29 @@ h6,
     width: 120px;
     height: 120px;
 }
+
+/* Styles for the chatbot button */
+.chatbot-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-button:hover {
+    background-color: #0056b3;
+}
+
+.chatbot-icon {
+    margin-right: 10px;
+}
+
+.chatbot-text {
+    font-size: 16px;
+    font-weight: bold;
+}

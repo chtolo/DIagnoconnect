@@ -93,7 +93,14 @@
                 <a href="{{ url_for('contact') }}" class="nav-item nav-link">Contact</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="{{ url_for('predictor') }}" class="btn btn-primary py-2 px-4 ms-3">Prédicteur</a>
+            <div id="chatbotButton" class="chatbot-button">
+                <div class="chatbot-icon">
+                    <i class="bi bi-chat-dots"></i>
+                </div>
+                <div class="chatbot-text">
+                    <a href="{{ url_for('predictor') }}">Our Assistant</a>
+                </div>
+            </div>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -148,8 +155,6 @@
                             Comment utilisons-nous la puissance des algorithmes ? Notre approche repose sur l'apprentissage automatique, une discipline qui permet à nos systèmes de s'adapter et d'apprendre à partir des données médicales que vous nous fournissez. Chaque interaction avec notre application web alimente notre modèle, le rendant plus intelligent et plus précis au fil du temps. C'est cette capacité d'adaptation constante qui nous permet de rester à la pointe des avancées médicales et de vous offrir des diagnostics toujours plus fiables.
                             
                         </p>
-                        <a href="{{ url_for('predictor') }}" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Prédicteur</a>
-
                 </div>
                     
                 <div class="col-lg-5" style="min-height: 500px;">
